@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import Glamorous from 'glamorous'
-import TransactionList from './TransactionList'
+import Glamorous from 'glamorous';
+import TransactionList from './TransactionList';
 
 const Container = Glamorous.div({
-  backgroundColor: "#EEE"
+  backgroundColor: '#EEE',
 });
 
 const Text = Glamorous.p({
-  color: "#FF33CC"
+  color: '#FF33CC',
 });
 
 const Header = Glamorous.h1({
-  fontSize: "22px"
+  fontSize: '22px',
 });
 
 const transactions = [
@@ -19,14 +19,14 @@ const transactions = [
     title: 'Ice cream',
     total: 25,
     owner: 'Jon',
-    participants: ['Jon', 'Kelly', 'Tom']
+    participants: ['Jon', 'Kelly', 'Tom'],
   },
   {
     title: 'Pizza',
     total: 30,
     owner: 'Kelly',
-    participants: ['Jon', 'Kelly']
-  }
+    participants: ['Jon', 'Kelly'],
+  },
 ];
 
 class App extends Component {
