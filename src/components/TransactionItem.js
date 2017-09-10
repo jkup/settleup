@@ -11,12 +11,18 @@ const Cell = Glamorous.td({
 
 class TransactionItem extends Component {
   render() {
-    const { title, participants, total, owner } = this.props.transaction;
+    const { datetime, title, participants, total, owner } = this.props.transaction;
+    const date = new Date(datetime).toLocaleDateString();
     return (
       <Row>
+        <Cell>
+          <button>Edit</button>
+        </Cell>
+        <Cell>{date}</Cell>
         <Cell>{title}</Cell>
         <Cell>{total}</Cell>
         <Cell>{owner}</Cell>
+        <Cell>{participants.join(', ')}</Cell>
       </Row>
     );
   }
