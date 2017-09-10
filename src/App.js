@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Glamorous from 'glamorous'
+
+const Container = Glamorous.div({
+  backgroundColor: "#EEE"
+});
+
+const Text = Glamorous.p({
+  color: "#FF33CC"
+});
+
+const Header = Glamorous.h1({
+  fontSize: "22px"
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <Container>
+        <Header>
           <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
+        </Header>
+        <Text>
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        </Text>
+      </Container>
     );
   }
 }
